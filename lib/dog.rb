@@ -57,6 +57,7 @@ class Dog
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
     
     DB[:conn].execute(sql, self.name, self.breed, self.id)
+    binding.pry
         Dog.new(name: DB[:conn].execute(sql, self.name, self.breed, self.id)[0][1],breed: DB[:conn].execute(sql, self.name, self.breed, self.id)[0][2],
       id: DB[:conn].execute(sql, self.name, self.breed, self.id)[0][0])
   end
