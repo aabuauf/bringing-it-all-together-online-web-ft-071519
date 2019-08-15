@@ -78,7 +78,7 @@ class Dog
     
     row =DB[:conn].execute(sql, id)[0]
     dog = Dog.new(name: row[1],breed: row[2], id: row[0])
-<<<<<<< HEAD
+
   end
   
   def self.find_or_create_by(hash)
@@ -103,10 +103,9 @@ class Dog
     row =DB[:conn].execute(sql, name)[0]
     dog = Dog.new(name: row[1],breed: row[2], id: row[0])
   end
-=======
-  end
+
   
 
->>>>>>> b9952872782b13a11c83004b6a757daf4e01da3d
+
 
 end
